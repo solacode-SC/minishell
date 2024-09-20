@@ -42,3 +42,14 @@ typedef struct	s_sig
 	int				exit_status;
 	pid_t			pid;
 }				t_sig;
+
+
+
+// all signals here
+char* signal_things();
+
+// all linked lists here
+
+// all lexer here
+void to_lexer();
+void print_lexer();

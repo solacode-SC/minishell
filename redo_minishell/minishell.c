@@ -1,4 +1,3 @@
-
 #include "minishell.h"
 
 t_var_free	g_var_f;
@@ -37,14 +36,6 @@ int	ft_token(char c, int *singl, int *doubl)
 		return (1);
 }
 
-void	chang_status(t_env *envp)
-{
-	if (g_var_f.exit_s != 0)
-	{
-		envp->exit_status = g_var_f.exit_s;
-		g_var_f.exit_s = 0;
-	}
-}
 
 int	ft_minishell(t_data *data, t_env **envp, char *len)
 {

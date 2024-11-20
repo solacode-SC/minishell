@@ -102,50 +102,66 @@ typedef struct t_var_free
 	int				flg;
 }					t_var_free;
 
+// tools funs
+
 char				**ft_split(char *str, char c);
 int					count_str(char **str);
-t_data				*ft_parsing(t_lexer *lexer, t_env *envp);
 int					ft_strlen(char *str);
-int					syntax_error(t_lexer **lexer);
 char				*ft_strsrch(char *str, char c);
-char				*apend_char_str(char *str, char c);
-void				apend_in_struct(t_lexer **lexer, char *str, int type);
-void				ft_lstadd_back(t_lexer **lst, t_lexer *new);
-int					ft_token(char c, int *singl, int *doubl);
-int					get_next_qout(char *str);
 char				*ft_strncpy(char *dest, char *src, int size);
-void				ft_lexer(char *len, t_lexer **lexer);
-char				**ft_catstr(char **str, char **str1);
-char				*ft_strncpy(char *dest, char *src, int size);
-int					count_list(t_data *data);
 void				*ft_calloc(size_t count, size_t size);
-void				free_lexer(t_lexer *lexer);
 char				*ft_strdup(char *str);
 char				**ft_split_it(char *str);
 char				*ft_itoa(int nb);
-char				**ft_addstring(char **str, t_lexer *lexer, t_env *envp);
 int					ft_isalnum(int c);
-char				*expending_herd(char *str, t_env *envp);
 int					ft_atoi(char *str);
 int					is_whitespace(char c);
-char				**ft_catstr(char **str, char **str1);
-int					print_error(t_lexer **lexer, char *str, char *str1);
-void				f(int sig);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
+int					ft_strchr(const char *s, int c);
+int					ft_strcmp(char *s1, char *s2);
+int					ft_isalpha(int c);
+int					ft_isdigit(int c);
+char				*skip_char(char *s, char c);
+char				*ft_strjoinn(char *s1, char *ss2);
+void				*ft_memcpy(void *dest, const void *src, size_t size);
+char				**ft_catstr(char **str, char **str1);
+
+// tools for linkedlists
+
+void				ft_lstadd_back(t_lexer **lst, t_lexer *new);
+int					count_list(t_data *data);
 void				ft_lstadd_backenv(t_env **env, t_env *new);
+char				**ft_addstring(char **str, t_lexer *lexer, t_env *envp);
+
+// lexer & parsing
+
+t_data				*ft_parsing(t_lexer *lexer, t_env *envp);
+char				*apend_char_str(char *str, char c);
+void				apend_in_struct(t_lexer **lexer, char *str, int type);
+int					ft_token(char c, int *singl, int *doubl);
+int					get_next_qout(char *str);
+void				ft_lexer(char *len, t_lexer **lexer);
+void				free_lexer(t_lexer *lexer);
+char				*expending_herd(char *str, t_env *envp);
 void 				check_word_expand(char *str,t_var *var);
-// exicutiom ------------------
+
+void				f(int sig);
+
+
+
+int					print_error(t_lexer **lexer, char *str, char *str1);
+int					syntax_error(t_lexer **lexer);
+
+// exicutiom 
+
 void				ft_execution(t_data **data, char **env, t_env **envp);
 int					check_file(t_data *data, t_var_us *var);
-int					ft_strchr(const char *s, int c);
 char				*check_path(t_var_us var, t_data *data);
 void				execut_comand(t_data **data, char **env, t_env **envp);
 void				ft_setenv(char *env, t_env **envp);
 char				*ft_getenv(t_env *env, char *str);
-void				*ft_memcpy(void *dest, const void *src, size_t size);
 void				ft_lstadd_backenv(t_env **env, t_env *new);
 int					ft_export(t_data *data, t_env **env);
-int					ft_strcmp(char *s1, char *s2);
 int					ft_unset(t_data *data, t_env **envp);
 int					execut_buildin(t_data *data, t_env **envp);
 int					check_singcmd_build(t_data *data, t_env **envp);
@@ -153,15 +169,11 @@ int					check_cmd_build(t_data *data, t_env **envp, t_var_us var);
 void				ft_free1(char **str);
 void				free_data(t_data *data);
 char				*ft_getvar(char *str);
-char				*ft_strjoinn(char *s1, char *ss2);
-int					ft_isalpha(int c);
 char				**ft_expending_word(char *str, t_env *envp, int flg);
 void				ft_exit(t_data *data, t_env *envp);
 int					ft_herdoc(t_data *data, t_env *envp);
 void				free_envp(t_env *envp);
-int					ft_isdigit(int c);
 int					ft_cd(t_data *data, t_env *env);
-char				*skip_char(char *s, char c);
 int					execut_buildin(t_data *data, t_env **envp);
 int					ft_printf(char *s1, char *s2, char *s3);
 int					ft_printf1(char *s1, char s2, char *s3);

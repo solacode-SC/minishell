@@ -125,34 +125,36 @@ char				*skip_char(char *s, char c);
 char				*ft_strjoinn(char *s1, char *ss2);
 void				*ft_memcpy(void *dest, const void *src, size_t size);
 char				**ft_catstr(char **str, char **str1);
+void				ft_putstr(char *str);
 
 // tools for linkedlists
 
 void				ft_lstadd_back(t_lexer **lst, t_lexer *new);
 int					count_list(t_data *data);
-void				ft_lstadd_backenv(t_env **env, t_env *new);
 char				**ft_addstring(char **str, t_lexer *lexer, t_env *envp);
 
 // lexer & parsing
 
 t_data				*ft_parsing(t_lexer *lexer, t_env *envp);
-char				*apend_char_str(char *str, char c);
 void				apend_in_struct(t_lexer **lexer, char *str, int type);
 int					ft_token(char c, int *singl, int *doubl);
-int					get_next_qout(char *str);
 void				ft_lexer(char *len, t_lexer **lexer);
+
+char				*apend_char_str(char *str, char c);
+// int					get_next_qout(char *str);
 void				free_lexer(t_lexer *lexer);
 char				*expending_herd(char *str, t_env *envp);
 void 				check_word_expand(char *str,t_var *var);
 
 void				f(int sig);
 
+void				handle_signal1(int sig);
 
-
-int					print_error(t_lexer **lexer, char *str, char *str1);
+// int					print_error(t_lexer **lexer, char *str, char *str1);
 int					syntax_error(t_lexer **lexer);
 
 // exicutiom 
+
 
 void				ft_execution(t_data **data, char **env, t_env **envp);
 int					check_file(t_data *data, t_var_us *var);

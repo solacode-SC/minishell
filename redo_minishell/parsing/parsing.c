@@ -1,4 +1,4 @@
-#include "../minishell.h"
+#include "../header/minishell.h"
 
 void	apend_to_data(t_data **data, t_file **file, char ***cmd)
 {

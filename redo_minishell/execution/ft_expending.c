@@ -1,5 +1,6 @@
 
-#include "../header/minishell.h"
+
+#include "minishell.h"
 
 
 void	add_to_str(char *str, t_var *var)

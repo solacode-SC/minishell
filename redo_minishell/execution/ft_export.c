@@ -1,5 +1,6 @@
 
-#include "../header/minishell.h"
+
+#include "minishell.h"
 
 
 int	ft_check_str(char *str)

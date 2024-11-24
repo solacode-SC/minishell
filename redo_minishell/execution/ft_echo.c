@@ -1,5 +1,5 @@
 
-#include "../header/minishell.h"
+#include "minishell.h"
 
 
 int	check_newline_flag(t_data *data, int *i)

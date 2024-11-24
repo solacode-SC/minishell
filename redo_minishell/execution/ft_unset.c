@@ -1,4 +1,5 @@
-#include "../header/minishell.h"
+
+#include "minishell.h"
 
 
 void	remove_env_var(t_env **envp, char *var_name)

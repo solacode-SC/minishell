@@ -1,5 +1,5 @@
 
-#include "../header/minishell.h"
+#include "minishell.h"
 
 void check_word_expand(char *str,t_var *var)
 {

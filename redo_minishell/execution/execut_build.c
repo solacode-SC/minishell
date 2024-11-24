@@ -1,5 +1,5 @@
 
-#include "../header/minishell.h"
+#include "minishell.h"
 
 
 int	ft_pwd(t_data *data, t_env *env)

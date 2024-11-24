@@ -1,5 +1,6 @@
 
-#include "../header/minishell.h"
+
+#include "minishell.h"
 
 
 void	ft_lstadd_backenv(t_env **env, t_env *new)

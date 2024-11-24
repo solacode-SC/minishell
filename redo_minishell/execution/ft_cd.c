@@ -1,5 +1,5 @@
 
-#include "../header/minishell.h"
+#include "minishell.h"
 
 
 void	handle_no_argument(t_env *env, char *tmp)

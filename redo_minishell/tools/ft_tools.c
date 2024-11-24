@@ -1,4 +1,4 @@
-#include "../header/minishell.h"
+#include "minishell.h"
 
 int	ft_copy(char **cmd, char **str)
 {

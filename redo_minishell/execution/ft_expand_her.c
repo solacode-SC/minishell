@@ -1,5 +1,5 @@
 
-#include "../header/minishell.h"
+#include "minishell.h"
 
 
 char	*add_tostr(char *str, t_var var, int *i)

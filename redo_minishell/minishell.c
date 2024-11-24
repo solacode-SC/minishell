@@ -1,4 +1,5 @@
-#include "../header/minishell.h"
+
+#include "minishell.h"
 
 t_var_free	g_var_f;
 

@@ -1,6 +1,5 @@
 
-#include "../header/minishell.h"
-
+#include "minishell.h"
 
 void	change_shlvl(t_env *envp)
 {

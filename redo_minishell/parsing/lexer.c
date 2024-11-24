@@ -1,4 +1,5 @@
-#include "../header/minishell.h"
+
+#include "minishell.h"
 
 
 int	ft_outred(t_lexer **lexer, char *len)

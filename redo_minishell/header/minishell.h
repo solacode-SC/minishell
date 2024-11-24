@@ -109,21 +109,25 @@ int					count_str(char **str);
 int					ft_strlen(char *str);
 char				*ft_strsrch(char *str, char c);
 char				*ft_strncpy(char *dest, char *src, int size);
+
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(char *str);
 char				**ft_split_it(char *str);
 char				*ft_itoa(int nb);
 int					ft_isalnum(int c);
+
 int					ft_atoi(char *str);
 int					is_whitespace(char c);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_strchr(const char *s, int c);
 int					ft_strcmp(char *s1, char *s2);
+
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 char				*skip_char(char *s, char c);
 char				*ft_strjoinn(char *s1, char *ss2);
 void				*ft_memcpy(void *dest, const void *src, size_t size);
+
 char				**ft_catstr(char **str, char **str1);
 void				ft_putstr(char *str);
 

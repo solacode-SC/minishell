@@ -1,5 +1,5 @@
 
-#include "../header/minishell.h"
+#include "minishell.h"
 
 
 void	ft_lstadd_back(t_lexer **lst, t_lexer *new)

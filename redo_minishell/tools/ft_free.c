@@ -1,4 +1,5 @@
-#include "../header/minishell.h"
+
+#include "minishell.h"
 
 
 void	ft_free1(char **str)
@@ -80,4 +81,21 @@ void	free_var(t_var_us *var)
 	}
 	if (var->id)
 		free(var->id);
+}
+
+void	free_lexer(t_lexer *lexer)
+{
+	t_lexer	*next;
+
+	next = lexer;
+	if (!lexer)
+		return ;
+	while (next != NULL)
+	{
+		lexer = next->next;
+		if (next->data)
+			free(next->data);
+		free(next);
+		next = lexer;
+	}
 }

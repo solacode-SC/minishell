@@ -25,8 +25,6 @@ SRC = minishell.c \
       execution/ft_echo.c \
       execution/ft_env.c \
       execution/ft_exit.c \
-	execution/ft_expand_her.c \
-      execution/ft_expending.c \
       execution/ft_export.c \
 	execution/ft_getenv.c \
       execution/ft_herdoc.c \
@@ -34,9 +32,11 @@ SRC = minishell.c \
 	execution/ft_unset.c \
       execution/print_sort.c \
 	execution/set_env.c \
+      parsing/ft_expending.c \
+	parsing/ft_expand_her.c \
       parsing/lexer.c \
       parsing/parsing.c \
-      tools/error.c \
+      tools/ft_error.c \
       tools/ft_free.c \
       tools/ft_fun1.c \
       tools/ft_fun2.c \
